@@ -1,33 +1,36 @@
 katz_deli = []
 
-def line(list)
+def line(deli)
   the_line = []
-  if list.length == 0
+  if deli.length == 0
     puts "The line is currently empty."
   else 
-    the_line.each_with_index(0) do |name,index|
-    the_line.push("#{index}. #{name}")
+    deli.each_with_index do |name,index|
+    the_line.push("#{index + 1}. #{name}")
+  end
+  puts "The line is currently: #{the_line.join(" ")}"
+end
+end
+
+def take_a_number(list,name)
+  #update current line of people, add name to the end of the line
+  
+  updated_line = []
+  list.push(name)
+  
+  list.each_with_index do |name,index|
+    puts "Welcome, #{name}. You are number #{index + 1} in line."
+    
   end
 end
-  puts #missing the result
-end
+
+    # context "there are already people in line" do
+    #   it "should add a person to the end of the line" do
+    #     # This weird looking %w syntax is just another way to instantiate an
+    #     # Array. %w(item1 item2) is equivalent to ["item1", "item2"]
+    #     expect($stdout).to receive(:puts).with("Welcome, Grace. You are number 4 in line.")
+    #     take_a_number(other_deli, "Grace")
+    #     expect(other_deli).to eq(%w(Logan Avi Spencer Grace))
 
 
-# hash = Hash.new
-# %w(cat dog wombat).each_with_index { |item, index|
-#   hash[item] = index
-  
-#   ['hello', 'universe'].each_with_index do |value, index|
-#   puts "#{index}: #{value}"
-  
-  
-# line_method_array = []
-#   if numinline.length == 0
-#     puts "The line is currently empty."
-#   else
-#     line_method_array.each.with_index(0) do |name, index|
-#       line_method_array.push("#{index}. #{name}")
-#       # push method will push the name into the index 
-#     end
-#     puts "The line is: #{line_method_array.join(" ")}"
-#   end
+
