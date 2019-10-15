@@ -13,16 +13,13 @@ end
 end
 
 def take_a_number(list,name)
-  #update current line of people, add name to the end of the line
-  
-  updated_line = []
-  list.push(name)
-  
-  list.each_with_index do |name,index|
-    puts "Welcome, #{name}. You are number #{index + 1} in line."
-    
-  end
+  #update current line by adding name to end of the line
+list.push(name)
+
+#Tell new name where they are in the line
+    puts "Welcome, #{name}. You are number #{list.length} in line."
 end
+
 
     # context "there are already people in line" do
     #   it "should add a person to the end of the line" do
@@ -32,5 +29,12 @@ end
     #     take_a_number(other_deli, "Grace")
     #     expect(other_deli).to eq(%w(Logan Avi Spencer Grace))
 
-
+def now_serving(katz_deli)
+  if katz_deli.length == 0
+    puts "There is nobody waiting to be served!"
+  else 
+    puts "Currently serving #{katz_deli[0]}."
+      katz_deli.shift 
+  end
+end
 
