@@ -1,6 +1,6 @@
 # Write your code 
 def line(katz_deli)
-  str = "The line is currently: "
+  str = "The line is currently:"
   if katz_deli.length >= 1
     katz_deli.each_with_index {|name, index| str.concat("#{index + 1}. " "#{name}")} 
     puts str
